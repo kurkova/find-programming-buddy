@@ -2,7 +2,7 @@
 
 This application is the answer to the often arising problem in finding the right person to jointly create a project as part of learning.
 
-Application is progress. 
+Application is in progress. 
 
 ## Technologies & Frameworks
 - [MySQL](https://www.mysql.com)
