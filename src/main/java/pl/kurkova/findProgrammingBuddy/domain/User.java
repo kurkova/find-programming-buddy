@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,5 +28,15 @@ public class User {
     @Column(name = "levelOfProgramming")
     private String levelOfProgramming;
 
+    @Column(name = "sizeOfTeam")
+    private int sizeOfTeam;
 
+//    @OneToMany(
+//            targetEntity = Technology.class,
+//            mappedBy = "userId",
+//            fetch = FetchType.EAGER
+//    )
+
+//    private List<Technology> technologiesToLearn;
+//    private List<Technology> technologiesKnown;
 }
