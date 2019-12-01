@@ -24,4 +24,8 @@ public class Technology {
     @Column(name = "kindOfTechnology")
     @Enumerated(EnumType.STRING)
     private KindOfTechnology kindOfTechnology;
+
+    @ManyToOne
+    @JoinColumn(name = "user_Id")
+    private User user;
 }
