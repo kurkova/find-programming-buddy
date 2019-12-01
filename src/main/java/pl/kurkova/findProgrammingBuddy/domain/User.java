@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -31,7 +32,18 @@ public class User {
     @Column(name = "sizeOfTeam")
     private int sizeOfTeam;
 
-    @Column(name = "TechnologiesList")
-    private TechnologyList technologiesList;
+    @OneToMany(
+            targetEntity = Technology.class,
+            mappedBy = "user",
+            fetch = FetchType.EAGER
+    )
+    private List<Technology> technologiesKnown = new ArrayList<>();
+
+    @OneToMany(
+            targetEntity = Technology.class,
+            mappedBy = "user",
+            fetch = FetchType.EAGER
+    )
+    private List<Technology> technologiesToStudy = new ArrayList<>();
 
 }
