@@ -31,12 +31,7 @@ public class User {
     @Column(name = "sizeOfTeam")
     private int sizeOfTeam;
 
-//    @OneToMany(
-//            targetEntity = Technology.class,
-//            mappedBy = "userId",
-//            fetch = FetchType.EAGER
-//    )
+    @Column(name = "TechnologiesList")
+    private TechnologyList technologiesList;
 
-//    private List<Technology> technologiesToLearn;
-//    private List<Technology> technologiesKnown;
 }
