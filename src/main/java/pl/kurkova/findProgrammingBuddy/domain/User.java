@@ -3,6 +3,8 @@ package pl.kurkova.findProgrammingBuddy.domain;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 @Entity
 @Table (name = "users")
 public class User {
@@ -32,12 +35,6 @@ public class User {
     @Column(name = "sizeOfTeam")
     private int sizeOfTeam;
 
-    @OneToMany(
-            targetEntity = Technology.class,
-            mappedBy = "user",
-            fetch = FetchType.EAGER
-    )
-    private List<Technology> technologiesKnown = new ArrayList<>();
 
     @OneToMany(
             targetEntity = Technology.class,
