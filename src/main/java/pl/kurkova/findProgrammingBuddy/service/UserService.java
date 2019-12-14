@@ -20,7 +20,7 @@ public class DbService {
         return userRepository.findAll();
     }
 
-    public Optional<User> getUserById(Long id){
+    public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
     }
 
