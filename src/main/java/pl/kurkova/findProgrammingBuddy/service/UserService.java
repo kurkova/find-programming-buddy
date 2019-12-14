@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Transactional
 @Service
-public class DbService {
+public class UserService {
 
     @Autowired
     private UserRepository userRepository;
